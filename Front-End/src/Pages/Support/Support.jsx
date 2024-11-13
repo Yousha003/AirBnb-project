@@ -38,7 +38,7 @@ function SupportPage() {
         <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-6">Support</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 font-semibold mb-1">Name</label>
+            <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 font-semibold mb-1">Namn</label>
             <input
               type="text"
               id="name"
@@ -50,7 +50,7 @@ function SupportPage() {
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-gray-700 dark:text-gray-300 font-semibold mb-1">Email</label>
+            <label htmlFor="email" className="block text-gray-700 dark:text-gray-300 font-semibold mb-1">E-mail</label>
             <input
               type="email"
               id="email"
@@ -62,7 +62,7 @@ function SupportPage() {
             />
           </div>
           <div>
-            <label htmlFor="message" className="block text-gray-700 dark:text-gray-300 font-semibold mb-1">Message</label>
+            <label htmlFor="message" className="block text-gray-700 dark:text-gray-300 font-semibold mb-1">Meddelande</label>
             <textarea
               id="message"
               name="message"
@@ -76,7 +76,7 @@ function SupportPage() {
             type="submit"
             className="w-full bg-blue-500 dark:bg-blue-700 hover:bg-blue-600 dark:hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-300 dark:focus:ring-blue-500"
           >
-            Send Support Request
+            Skicka meddelande!
           </button>
           {message && <div className="text-center text-blue-500 dark:text-blue-300 mt-4">{message}</div>}
         </form>

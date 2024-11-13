@@ -130,26 +130,26 @@ function DetailPage() {
           <div className="flex flex-col md:flex-row gap-8">
             <div className="flex-1">
               <div className="mb-4">
-                <span className="font-semibold text-lg text-gray-700 dark:text-gray-300">Host:</span>
+                <span className="font-semibold text-lg text-gray-700 dark:text-gray-300">Värd:</span>
                 <div className="text-gray-600 dark:text-gray-300">{detailAccommodation?.host}</div>
               </div>
               <div className="mb-4">
-                <span className="font-semibold text-lg text-gray-700 dark:text-gray-300">Location:</span>
+                <span className="font-semibold text-lg text-gray-700 dark:text-gray-300">Plats:</span>
                 <div className="text-gray-600 dark:text-gray-300">{detailAccommodation?.location}</div>
               </div>
               <div className="mb-4">
-                <span className="font-semibold text-lg text-gray-700 dark:text-gray-300">Description:</span>
+                <span className="font-semibold text-lg text-gray-700 dark:text-gray-300">Beskrivning:</span>
                 <div className="text-gray-600 dark:text-gray-300">{detailAccommodation?.description}</div>
               </div>
               <div className="mb-4">
-                <span className="font-semibold text-lg text-gray-700 dark:text-gray-300">Price:</span>
-                <div className="text-gray-600 dark:text-gray-300">${detailAccommodation?.price} per night</div>
+                <span className="font-semibold text-lg text-gray-700 dark:text-gray-300">Pris:</span>
+                <div className="text-gray-600 dark:text-gray-300">${detailAccommodation?.price} per natt</div>
               </div>
             </div>
 
             <div className="flex-1 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
               <div className="mb-4">
-                <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">Check-in:</label>
+                <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">Välj inchecknings datum:</label>
                 <DatePicker
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
@@ -161,7 +161,7 @@ function DetailPage() {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">Check-out:</label>
+                <label className="block text-gray-700 dark:text-gray-300 font-semibold mb-2">Välj utchecknings datum:</label>
                 <DatePicker
                   selected={endDate}
                   onChange={(date) => setEndDate(date)}
@@ -180,13 +180,13 @@ function DetailPage() {
                 onClick={handleReservation}
                 className="w-full bg-blue-500 dark:bg-blue-700 hover:bg-blue-600 dark:hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-300"
               >
-                Reserve
+                Reservera
               </button>
             </div>
           </div>
         </>
       ) : (
-        <div className="text-center text-gray-600 dark:text-gray-300">Accommodation not found</div>
+        <div className="text-center text-gray-600 dark:text-gray-300">Kunde inte hitta boende!</div>
       )}
     </div>
   );

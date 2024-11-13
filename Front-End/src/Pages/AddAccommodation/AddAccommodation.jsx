@@ -52,10 +52,10 @@ const AddAccommodation = () => {
   if (!user.token) {
     return (
       <div className="container mx-auto p-8 text-gray-800 dark:text-gray-100 bg-white dark:bg-gray-900 rounded-lg shadow-md">
-        <h1 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-6">Add Accommodation</h1>
+        <h1 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-6">Lägg till boende</h1>
         <p className="text-lg text-gray-800 dark:text-gray-100">
-          You need to <Link to="/login" className="text-red-600 dark:text-red-400 hover:underline">log in</Link> or{' '}
-          <Link to="/register" className="text-red-600 dark:text-red-400 hover:underline">register</Link> to add accommodation.
+          Du måste <Link to="/login" className="text-red-600 dark:text-red-400 hover:underline">logga in</Link> eller{' '}
+          <Link to="/register" className="text-red-600 dark:text-red-400 hover:underline">registrera dig</Link> för att lägga till boende.
         </p>
       </div>
     );
@@ -63,12 +63,12 @@ const AddAccommodation = () => {
 
   return (
     <div className="container mx-auto p-8 text-gray-800 dark:text-gray-100 bg-white dark:bg-gray-900 rounded-lg shadow-md">
-      <h1 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-6">Add Accommodation</h1>
+      <h1 className="text-3xl font-bold text-red-600 dark:text-red-400 mb-6">Lägg till boende</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"
           name="title"
-          placeholder="Title"
+          placeholder="Titel"
           value={formData.title}
           onChange={handleChange}
           required
@@ -77,7 +77,7 @@ const AddAccommodation = () => {
         <input
           type="text"
           name="host"
-          placeholder="Host"
+          placeholder="Värd"
           value={formData.host}
           onChange={handleChange}
           required
@@ -86,7 +86,7 @@ const AddAccommodation = () => {
         <input
           type="text"
           name="location"
-          placeholder="Location"
+          placeholder="Plats"
           value={formData.location}
           onChange={handleChange}
           required
@@ -94,7 +94,7 @@ const AddAccommodation = () => {
         />
         <textarea
           name="description"
-          placeholder="Description"
+          placeholder="Beskrivning"
           value={formData.description}
           onChange={handleChange}
           required
@@ -103,7 +103,7 @@ const AddAccommodation = () => {
         <input
           type="number"
           name="price"
-          placeholder="Price per night"
+          placeholder="Pris per natt"
           value={formData.price}
           onChange={handleChange}
           required
@@ -112,7 +112,7 @@ const AddAccommodation = () => {
         <input
           type="text"
           name="imageUrl"
-          placeholder="Main Image URL"
+          placeholder="Huvudbild URL"
           value={formData.imageUrl}
           onChange={handleChange}
           required
@@ -121,13 +121,13 @@ const AddAccommodation = () => {
         <div className="flex items-center space-x-2">
           <input
             type="text"
-            placeholder="Additional Image URL"
+            placeholder="Ytterligare bild URL"
             value={additionalImage}
             onChange={(e) => setAdditionalImage(e.target.value)}
             className="w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:border-red-600 dark:focus:border-red-400"
           />
           <button type="button" onClick={handleAddImage} className="bg-red-600 dark:bg-red-400 text-white px-4 py-2 rounded-lg hover:bg-red-700 dark:hover:bg-red-500">
-            Add Image
+            Lägg till bild
           </button>
         </div>
         <div className="flex flex-wrap gap-4 mt-4">
@@ -136,7 +136,7 @@ const AddAccommodation = () => {
           ))}
         </div>
         <button type="submit" className="w-full bg-red-600 dark:bg-red-400 text-white p-3 rounded-lg hover:bg-red-700 dark:hover:bg-red-500">
-          Add Accommodation
+          Lägg till boende
         </button>
       </form>
     </div>

@@ -32,7 +32,7 @@ const NavbarComponent = () => {
         <div className={`navbar-logo ${showMobileMenu ? 'hidden' : 'block'} lg:block`}>
           <h1 className="text-3xl font-extrabold">
             <Link to="/" className="text-red-600 hover:text-red-500 dark:text-red-400 dark:hover:text-red-300">
-              TestBNB
+              HomeBNB
             </Link>
           </h1>
         </div>
@@ -67,27 +67,27 @@ const NavbarComponent = () => {
         >
           {showMobileMenu && (
             <h1 className="text-3xl font-extrabold text-red-600 dark:text-red-400 mb-4 text-center w-full">
-              ThinAirbnb
+              HomeBNB
             </h1>
           )}
           <Link to="/" className="text-lg font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400">
-            Home
+            Hem
           </Link>
           <Link to="/about" className="text-lg font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400">
-            About
+            Om oss
           </Link>
           <Link to="/reservations" className="text-lg font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400">
-            Reservations
+            Reservationer
           </Link>
           <Link to="/support" className="text-lg font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400">
             Support
           </Link>
           <Link to="/add-accommodation" className="text-lg font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400">
-            Add Accommodation
+            Lägg till boende
           </Link>
           {user.token ? (
             <button onClick={handleLogout} className="text-lg font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400">
-              Logout
+              Logga ut
             </button>
           ) : (
             <div className="relative">
@@ -100,10 +100,10 @@ const NavbarComponent = () => {
               {showUserMenu && (
                 <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 text-gray-800 dark:text-white py-2 rounded-lg shadow-lg transition ease-in-out duration-300 transform ${showUserMenu ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}">
                   <Link to="/login" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
-                    Login
+                    Logga in
                   </Link>
                   <Link to="/register" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
-                    Register
+                    Registerera dig
                   </Link>
                 </div>
               )}

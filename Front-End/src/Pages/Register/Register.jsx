@@ -48,7 +48,7 @@ function RegisterPage() {
         {message && <div className="text-center text-blue-500 mb-4">{message}</div>}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="firstName" className="block text-gray-700 font-semibold mb-1">First Name</label>
+            <label htmlFor="firstName" className="block text-gray-700 font-semibold mb-1">Förnamn</label>
             <input
               type="text"
               id="firstName"
@@ -60,7 +60,7 @@ function RegisterPage() {
             />
           </div>
           <div>
-            <label htmlFor="lastName" className="block text-gray-700 font-semibold mb-1">Last Name</label>
+            <label htmlFor="lastName" className="block text-gray-700 font-semibold mb-1">Efternamn</label>
             <input
               type="text"
               id="lastName"
@@ -72,7 +72,7 @@ function RegisterPage() {
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-gray-700 font-semibold mb-1">Email</label>
+            <label htmlFor="email" className="block text-gray-700 font-semibold mb-1">E-mail</label>
             <input
               type="email"
               id="email"
@@ -84,7 +84,7 @@ function RegisterPage() {
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-gray-700 font-semibold mb-1">Password</label>
+            <label htmlFor="password" className="block text-gray-700 font-semibold mb-1">Lösenord</label>
             <input
               type="password"
               id="password"
@@ -99,7 +99,7 @@ function RegisterPage() {
             type="submit"
             className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-300"
           >
-            Create User
+            Skapa konto
           </button>
         </form>
       </div>

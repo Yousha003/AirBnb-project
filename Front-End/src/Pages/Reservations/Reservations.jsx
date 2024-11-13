@@ -76,10 +76,10 @@ const Reservations = () => {
   if (!userState.token) {
     return (
       <div className="container mx-auto p-6 text-center text-gray-800 dark:text-gray-100 bg-white dark:bg-gray-900 rounded-lg shadow-md">
-        <h1 className="text-4xl font-bold text-red-600 dark:text-red-400 mb-6">My Reservations</h1>
+        <h1 className="text-4xl font-bold text-red-600 dark:text-red-400 mb-6">Mina reservationer</h1>
         <p className="text-lg">
-          You need to <a href="/login" className="text-red-600 dark:text-red-400 hover:underline">log in</a> or{' '}
-          <a href="/register" className="text-red-600 dark:text-red-400 hover:underline">register</a> to view your reservations.
+          You need to <a href="/login" className="text-red-600 dark:text-red-400 hover:underline">logga in</a> eller{' '}
+          <a href="/register" className="text-red-600 dark:text-red-400 hover:underline">registrera dig</a> för att visa dina reservationer.
         </p>
       </div>
     );
@@ -87,7 +87,7 @@ const Reservations = () => {
 
   return (
     <div className="container mx-auto p-6 min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 relative mb-4">
-      <h1 className="text-4xl font-bold text-center text-red-600 dark:text-red-400 mb-6">My Reservations</h1>
+      <h1 className="text-4xl font-bold text-center text-red-600 dark:text-red-400 mb-6">Mina reservationer</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {reservations.map((reservation, index) => (
           <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
@@ -114,13 +114,13 @@ const Reservations = () => {
                         onClick={() => handleRemoveReservation(reservation._id)}
                         className="bg-red-500 dark:bg-red-600 hover:bg-red-600 dark:hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-red-300 dark:focus:ring-red-800"
                       >
-                        <FontAwesomeIcon icon={faTrashAlt} /> Remove
+                        <FontAwesomeIcon icon={faTrashAlt} /> Ta bort
                       </button>
                       <button
                         onClick={handlePaymentSelection}
                         className="bg-blue-500 dark:bg-blue-600 hover:bg-blue-600 dark:hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-300 dark:focus:ring-blue-800"
                       >
-                        <FontAwesomeIcon icon={faArrowRight} /> Continue to Payment
+                        <FontAwesomeIcon icon={faArrowRight} /> Fortsätt till betalning
                       </button>
                     </div>
                   ) : (
@@ -131,7 +131,7 @@ const Reservations = () => {
                       }}
                       className="bg-gray-500 dark:bg-gray-600 hover:bg-gray-600 dark:hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-gray-300 dark:focus:ring-gray-800"
                     >
-                      Cancel
+                      Avbryt
                     </button>
                   )}
                 </div>
@@ -143,7 +143,7 @@ const Reservations = () => {
       {activeModal === 'payment' && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="p-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg w-full max-w-md mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-6">Select Your Payment Method</h2>
+            <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-6">Välj betalsätt</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <button
                 onClick={() => setActiveModal('confirmation')}
@@ -179,13 +179,13 @@ const Reservations = () => {
       {activeModal === 'confirmation' && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="p-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg w-full max-w-md mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6">Payment Successful</h2>
-            <p className="text-lg text-gray-700 dark:text-gray-100 mb-6">Your payment has been processed. We will send a confirmation email shortly.</p>
+            <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6">Betalning godkänd!</h2>
+            <p className="text-lg text-gray-700 dark:text-gray-100 mb-6">Din betalning är godkänd, vi skickar en bekräftelse via mail.</p>
             <button
               onClick={() => setActiveModal(null)}
               className="mt-6 w-full bg-blue-500 dark:bg-blue-600 hover:bg-blue-600 dark:hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-300 dark:focus:ring-blue-800"
             >
-              Close
+              Stäng
             </button>
           </div>
         </div>

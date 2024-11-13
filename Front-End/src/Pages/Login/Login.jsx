@@ -30,10 +30,10 @@ function LoginPage() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-sm">
-        <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Login</h1>
+        <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Logga in</h1>
         <form className="space-y-4">
           <div>
-            <label htmlFor="email" className="block text-gray-700 font-semibold mb-1">Email</label>
+            <label htmlFor="email" className="block text-gray-700 font-semibold mb-1">E-mail</label>
             <input
               type="email"
               id="email"
@@ -43,7 +43,7 @@ function LoginPage() {
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-gray-700 font-semibold mb-1">Password</label>
+            <label htmlFor="password" className="block text-gray-700 font-semibold mb-1">Lösenord</label>
             <input
               type="password"
               id="password"
@@ -57,7 +57,7 @@ function LoginPage() {
             onClick={handleLogin}
             className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-300"
           >
-            Log In
+            Logga In
           </button>
         </form>
       </div>
