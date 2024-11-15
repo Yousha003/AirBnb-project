@@ -31,7 +31,7 @@ const NavbarComponent = () => {
         {/* Logo Hidden on Small Screens */}
         <div className={`navbar-logo ${showMobileMenu ? 'hidden' : 'block'} lg:block`}>
           <h1 className="text-3xl font-extrabold">
-            <Link to="/" className="text-red-600 hover:text-red-500 dark:text-red-400 dark:hover:text-red-300">
+            <Link to="/" className="text-black">
               HomeBNB
             </Link>
           </h1>
@@ -66,27 +66,27 @@ const NavbarComponent = () => {
           id="navbar-menu"
         >
           {showMobileMenu && (
-            <h1 className="text-3xl font-extrabold text-red-600 dark:text-red-400 mb-4 text-center w-full">
+            <h1 className="text-3xl font-extrabold text-black dark:text-red-400 mb-4 text-center w-full">
               HomeBNB
             </h1>
           )}
-          <Link to="/" className="text-lg font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400">
+          <Link to="/" className="text-lg font-medium text-black dark:text-white hover:text-red-600 dark:hover:text-red-400">
             Hem
           </Link>
-          <Link to="/about" className="text-lg font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400">
+          <Link to="/about" className="text-lg font-medium text-black dark:text-white hover:text-red-600 dark:hover:text-red-400">
             Om oss
           </Link>
-          <Link to="/reservations" className="text-lg font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400">
+          <Link to="/reservations" className="text-lg font-medium text-black dark:text-white hover:text-red-600 dark:hover:text-red-400">
             Reservationer
           </Link>
-          <Link to="/support" className="text-lg font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400">
+          <Link to="/support" className="text-lg font-medium text-black dark:text-white hover:text-red-600 dark:hover:text-red-400">
             Support
           </Link>
-          <Link to="/add-accommodation" className="text-lg font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400">
+          <Link to="/add-accommodation" className="text-lg font-medium text-black dark:text-white hover:text-red-600 dark:hover:text-red-400">
             Lägg till boende
           </Link>
           {user.token ? (
-            <button onClick={handleLogout} className="text-lg font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400">
+            <button onClick={handleLogout} className="text-lg font-medium text-black dark:text-white hover:text-red-600 dark:hover:text-red-400">
               Logga ut
             </button>
           ) : (
