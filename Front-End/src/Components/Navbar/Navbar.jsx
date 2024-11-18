@@ -65,11 +65,7 @@ const NavbarComponent = () => {
           } lg:flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 items-center mt-4 lg:mt-0 transition-all duration-500 ease-in-out transform ${showMobileMenu ? 'translate-y-0 opacity-100 justify-center w-full text-center' : '-translate-y-4 opacity-0 lg:opacity-100 lg:translate-y-0'}`}
           id="navbar-menu"
         >
-          {showMobileMenu && (
-            <h1 className="text-3xl font-extrabold text-black dark:text-red-400 mb-4 text-center w-full">
-              HomeBNB
-            </h1>
-          )}
+          
           <Link to="/" className="text-lg font-medium text-black dark:text-white hover:text-red-600 dark:hover:text-red-400">
             Hem
           </Link>

@@ -76,7 +76,7 @@ const Reservations = () => {
   if (!userState.token) {
     return (
       <div className="container mx-auto p-6 text-center text-gray-800 dark:text-gray-100 bg-white dark:bg-gray-900 rounded-lg shadow-md">
-        <h1 className="text-4xl font-bold text-red-600 dark:text-red-400 mb-6">Mina reservationer</h1>
+        <h1 className="text-4xl font-bold text-black mb-6">Mina reservationer</h1>
         <p className="text-lg">
           You need to <a href="/login" className="text-red-600 dark:text-red-400 hover:underline">logga in</a> eller{' '}
           <a href="/register" className="text-red-600 dark:text-red-400 hover:underline">registrera dig</a> för att visa dina reservationer.
@@ -87,7 +87,7 @@ const Reservations = () => {
 
   return (
     <div className="container mx-auto p-6 min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 relative mb-4">
-      <h1 className="text-4xl font-bold text-center text-red-600 dark:text-red-400 mb-6">Mina reservationer</h1>
+      <h1 className="text-4xl font-bold text-center text-black mb-6">Mina reservationer</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {reservations.map((reservation, index) => (
           <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
@@ -106,7 +106,7 @@ const Reservations = () => {
                     Period: {formatDate(reservation.checkin)} - {formatDate(reservation.checkout)}
                   </p>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    Total Price: ${calculateTotalPrice(reservation.checkin, reservation.checkout, reservation.accommodation.price)}
+                    Totala kostnader: {calculateTotalPrice(reservation.checkin, reservation.checkout, reservation.accommodation.price) + ' KR'}
                   </p>
                   {!isPaymentSelected ? (
                     <div className="flex space-x-2">
